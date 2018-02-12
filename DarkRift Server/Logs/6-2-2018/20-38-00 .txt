@@ -1,0 +1,56 @@
+[Trace]   DarkRiftServer        System Details:
+                                	OS: Microsoft Windows NT 6.2.9200.0
+                                	CLS Version: 4.0.30319.42000
+                                	DarkRift: 2.0.0.0 - Free
+[Trace]   PluginFactory         Created plugin 'Server'.
+[Info]    PluginManager         Loaded plugin Server version 1.0.0
+[Info]    DarkRiftServer        Server mounted, listening on port 4296.
+[Info]    P:Server              Avg Time in last 400 frames:0.00082
+[Info]    P:Server              Max: 0.0166
+[Info]    ClientManager         New client [0] connected [83.78.99.6:55710|58997].
+[Info]    P:Server              Avg Time in last 400 frames:0.00061
+[Info]    P:Server              Max: 0.011
+[Info]    ClientManager         New client [1] connected [31.10.154.172:16304|16258].
+[Info]    P:Server              Avg Time in last 400 frames:0.05359
+[Info]    P:Server              Max: 2.5789
+[Info]    ClientManager         New client [2] connected [194.191.240.42:6570|59114].
+[Info]    P:Server              Avg Time in last 400 frames:0.10395
+[Info]    P:Server              Max: 4.5547
+[Info]    P:Server              Avg Time in last 400 frames:0.10724
+[Info]    P:Server              Max: 0.2947
+[Info]    P:Server              Avg Time in last 400 frames:0.20188
+[Info]    P:Server              Max: 14.0975
+[Info]    P:Server              Avg Time in last 400 frames:0.22555
+[Info]    P:Server              Max: 6.8756
+[Info]    P:Server              Avg Time in last 400 frames:0.89238
+[Info]    P:Server              Max: 15.6541
+[Info]    P:Server              Avg Time in last 400 frames:1.67758
+[Info]    P:Server              Max: 52.2664
+[Info]    P:Server              Avg Time in last 400 frames:1.85622
+[Info]    P:Server              Max: 37.3745
+[Info]    P:Server              Avg Time in last 400 frames:2.50714
+[Info]    P:Server              Max: 39.0995
+[Info]    P:Server              Avg Time in last 400 frames:2.67281
+[Info]    P:Server              Max: 24.2737
+[Info]    P:Server              Avg Time in last 400 frames:5.70121
+[Info]    P:Server              Max: 1202.5289
+[Info]    P:Server              Avg Time in last 400 frames:6.91704
+[Info]    P:Server              Max: 1330.2775
+[Info]    P:Server              Avg Time in last 400 frames:4.72265
+[Info]    P:Server              Max: 443.9044
+[Info]    P:Server              Avg Time in last 400 frames:12.09977
+[Info]    P:Server              Max: 2000.9703
+[Info]    P:Server              Avg Time in last 400 frames:4.71203
+[Info]    P:Server              Max: 41.8873
+[Info]    ClientManager         Client [2] disconnected: ConnectionReset.
+[Info]    ClientManager         Client [2] disconnected: ConnectionReset.
+[Info]    ClientManager         Client [2] disconnected: ConnectionReset.
+[Info]    P:Server              Avg Time in last 400 frames:14.72305
+[Info]    P:Server              Max: 4671.8078
+[Info]    P:Server              Avg Time in last 400 frames:2.77848
+[Info]    P:Server              Max: 29.5177
+[Info]    P:Server              Avg Time in last 400 frames:64.97637
+[Info]    P:Server              Max: 10313.5534
+[Info]    ClientManager         Client [1] disconnected.
+[Info]    ClientManager         Client [0] disconnected: ConnectionAborted.
+[Info]    ClientManager         Client [0] disconnected: ConnectionAborted.

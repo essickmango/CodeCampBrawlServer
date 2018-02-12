@@ -1,0 +1,27 @@
+[Trace]   DarkRiftServer        System Details:
+                                	OS: Microsoft Windows NT 6.2.9200.0
+                                	CLS Version: 4.0.30319.42000
+                                	DarkRift: 2.0.0.0 - Free
+[Trace]   PluginFactory         Created plugin 'Server'.
+[Info]    PluginManager         Loaded plugin Server version 1.0.0
+[Info]    DarkRiftServer        Server mounted, listening on port 4296.
+[Info]    ClientManager         New client [0] connected [127.0.0.1:60692|62476].
+[Info]    P:Server              Avg Time in last 400 frames:0.0006
+[Info]    P:Server              Max: 0.013
+[Error]   Client                An plugin encountered an error whilst handling the MessageReceived event. The message was not distributed. (See logs for exception)
+                                 System.ArgumentException: An item with the same key has already been added.
+                                    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+                                    at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+                                    at MainPlugin.Player.CreateGuest(String name, IClient client)
+                                    at MainPlugin.Server.GuestJoin(Object sender, Message message)
+                                    at MainPlugin.Server.OnMessage(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.HandleIncomingMessage(Message message, SendMode sendMode)
+[Info]    ClientManager         Client [0] disconnected.
+[Info]    P:Server              Avg Time in last 400 frames:0.00066
+[Info]    P:Server              Max: 0.0172
+[Info]    ClientManager         New client [1] connected [127.0.0.1:60695|49416].
+[Info]    P:Server              Avg Time in last 400 frames:0.0008
+[Info]    P:Server              Max: 0.0185
+[Info]    P:Server              Avg Time in last 400 frames:0.00067
+[Info]    P:Server              Max: 0.0116
+[Info]    ClientManager         Client [1] disconnected.

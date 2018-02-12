@@ -1,0 +1,34 @@
+[Trace]   DarkRiftServer        System Details:
+                                	OS: Microsoft Windows NT 6.2.9200.0
+                                	CLS Version: 4.0.30319.42000
+                                	DarkRift: 2.0.0.0 - Free
+[Trace]   PluginFactory         Created plugin 'Server'.
+[Info]    PluginManager         Loaded plugin Server version 1.0.0
+[Info]    DarkRiftServer        Server mounted, listening on port 4296.
+[Info]    ClientManager         New client [0] connected [83.78.99.6:56113|49508].
+[Info]    P:Server              Avg Time in last 400 frames:0.00083
+[Info]    P:Server              Max: 0.0466
+[Info]    ClientManager         New client [1] connected [31.10.154.172:16333|16379].
+[Info]    P:Server              Avg Time in last 400 frames:0.06159
+[Info]    P:Server              Max: 2.9242
+[Info]    P:Server              Avg Time in last 400 frames:0.08795
+[Info]    P:Server              Max: 1.0112
+[Info]    P:Server              Avg Time in last 400 frames:0.11326
+[Info]    P:Server              Max: 2.6933
+[Info]    P:Server              Avg Time in last 400 frames:0.1793
+[Info]    P:Server              Max: 5.6097
+[Info]    P:Server              Avg Time in last 400 frames:0.32441
+[Info]    P:Server              Max: 12.8767
+[Info]    P:Server              Avg Time in last 400 frames:0.14819
+[Info]    P:Server              Max: 6.0088
+[Info]    P:Server              Avg Time in last 400 frames:0.26868
+[Info]    P:Server              Max: 10.1616
+[Info]    P:Server              Avg Time in last 400 frames:0.18559
+[Info]    P:Server              Max: 10.188
+[Info]    P:Server              Avg Time in last 400 frames:0.09582
+[Info]    P:Server              Max: 0.266
+[Info]    P:Server              Avg Time in last 400 frames:0.64209
+[Info]    P:Server              Max: 27.1125
+[Info]    P:Server              Avg Time in last 400 frames:0.58381
+[Info]    P:Server              Max: 14.5617
+[Info]    ClientManager         Client [0] disconnected.

@@ -1,0 +1,35 @@
+[Trace]   DarkRiftServer        System Details:
+                                	OS: Microsoft Windows NT 6.2.9200.0
+                                	CLS Version: 4.0.30319.42000
+                                	DarkRift: 2.0.0.0 - Free
+[Trace]   PluginFactory         Created plugin 'Server'.
+[Info]    PluginManager         Loaded plugin Server version 1.0.0
+[Info]    DarkRiftServer        Server mounted, listening on port 4296.
+[Info]    ClientManager         New client [0] connected [127.0.0.1:51446|56369].
+[Info]    P:Server              Avg Time in last 400 frames:0.04126
+[Info]    P:Server              Max: 3.3075
+[Info]    P:Server              Avg Time in last 400 frames:0.12524
+[Info]    P:Server              Max: 0.5596
+[Info]    P:Server              Avg Time in last 400 frames:0.15806
+[Info]    P:Server              Max: 0.3812
+[Info]    ClientManager         Client [0] disconnected.
+[Info]    P:Server              Avg Time in last 400 frames:0.11399
+[Info]    P:Server              Max: 3.5681
+[Info]    P:Server              Avg Time in last 400 frames:0.01992
+[Info]    P:Server              Max: 0.1047
+[Info]    P:Server              Avg Time in last 400 frames:0.01946
+[Info]    P:Server              Max: 0.0737
+[Info]    ClientManager         New client [1] connected [127.0.0.1:51455|60850].
+[Info]    P:Server              Avg Time in last 400 frames:0.0615
+[Info]    P:Server              Max: 0.2752
+[Info]    P:Server              Avg Time in last 400 frames:0.16439
+[Info]    P:Server              Max: 0.3323
+[Info]    P:Server              Avg Time in last 400 frames:0.37605
+[Info]    P:Server              Max: 5.5475
+[Info]    P:Server              Avg Time in last 400 frames:0.91095
+[Info]    P:Server              Max: 24.1174
+[Info]    ClientManager         Client [1] disconnected.
+[Info]    P:Server              Avg Time in last 400 frames:1.24764
+[Info]    P:Server              Max: 16.6424
+[Info]    P:Server              Avg Time in last 400 frames:0.06745
+[Info]    P:Server              Max: 2.6148

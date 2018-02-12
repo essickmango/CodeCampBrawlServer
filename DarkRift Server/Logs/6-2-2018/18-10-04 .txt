@@ -1,0 +1,107 @@
+[Trace]   DarkRiftServer        System Details:
+                                	OS: Microsoft Windows NT 6.2.9200.0
+                                	CLS Version: 4.0.30319.42000
+                                	DarkRift: 2.0.0.0 - Free
+[Trace]   PluginFactory         Created plugin 'Server'.
+[Info]    PluginManager         Loaded plugin Server version 1.0.0
+[Info]    DarkRiftServer        Server mounted, listening on port 4296.
+[Info]    ClientManager         New client [0] connected [127.0.0.1:53538|50908].
+[Info]    P:Server              Avg Time in last 400 frames:0.00072
+[Info]    P:Server              Max: 0.0174
+[Info]    ClientManager         Client [0] disconnected.
+[Info]    P:Server              Avg Time in last 400 frames:0.08112
+[Info]    P:Server              Max: 3.0072
+[Info]    P:Server              Avg Time in last 400 frames:0.01681
+[Info]    P:Server              Max: 0.0402
+[Info]    P:Server              Avg Time in last 400 frames:0.01764
+[Info]    P:Server              Max: 0.0441
+[Info]    P:Server              Avg Time in last 400 frames:0.01733
+[Info]    P:Server              Max: 0.0483
+[Info]    ClientManager         New client [1] connected [127.0.0.1:53547|62145].
+[Info]    P:Server              Avg Time in last 400 frames:0.14286
+[Info]    P:Server              Max: 2.2446
+[Info]    ClientManager         Client [1] disconnected.
+[Info]    P:Server              Avg Time in last 400 frames:0.05523
+[Info]    P:Server              Max: 0.4403
+[Info]    P:Server              Avg Time in last 400 frames:0.02975
+[Info]    P:Server              Max: 0.0732
+[Info]    P:Server              Avg Time in last 400 frames:0.03004
+[Info]    P:Server              Max: 0.0663
+[Info]    P:Server              Avg Time in last 400 frames:0.04182
+[Info]    P:Server              Max: 4.5516
+[Info]    P:Server              Avg Time in last 400 frames:0.03138
+[Info]    P:Server              Max: 0.1306
+[Info]    P:Server              Avg Time in last 400 frames:0.02894
+[Info]    P:Server              Max: 0.0707
+[Info]    P:Server              Avg Time in last 400 frames:0.03618
+[Info]    P:Server              Max: 2.3598
+[Info]    P:Server              Avg Time in last 400 frames:0.02959
+[Info]    P:Server              Max: 0.0607
+[Info]    P:Server              Avg Time in last 400 frames:0.02886
+[Info]    P:Server              Max: 0.0561
+[Info]    P:Server              Avg Time in last 400 frames:0.02808
+[Info]    P:Server              Max: 0.0561
+[Info]    P:Server              Avg Time in last 400 frames:0.03479
+[Info]    P:Server              Max: 1.8793
+[Info]    P:Server              Avg Time in last 400 frames:0.0309
+[Info]    P:Server              Max: 0.0899
+[Info]    P:Server              Avg Time in last 400 frames:0.02844
+[Info]    P:Server              Max: 0.076
+[Info]    P:Server              Avg Time in last 400 frames:0.02914
+[Info]    P:Server              Max: 0.0617
+[Info]    P:Server              Avg Time in last 400 frames:0.03478
+[Info]    P:Server              Max: 1.9901
+[Info]    P:Server              Avg Time in last 400 frames:0.03122
+[Info]    P:Server              Max: 0.0671
+[Info]    P:Server              Avg Time in last 400 frames:0.02928
+[Info]    P:Server              Max: 0.0622
+[Info]    P:Server              Avg Time in last 400 frames:0.03099
+[Info]    P:Server              Max: 0.1208
+[Info]    P:Server              Avg Time in last 400 frames:0.03583
+[Info]    P:Server              Max: 2.0474
+[Info]    P:Server              Avg Time in last 400 frames:0.03166
+[Info]    P:Server              Max: 0.0587
+[Info]    P:Server              Avg Time in last 400 frames:0.0311
+[Info]    P:Server              Max: 0.1165
+[Info]    P:Server              Avg Time in last 400 frames:0.03002
+[Info]    P:Server              Max: 0.0566
+[Info]    P:Server              Avg Time in last 400 frames:0.03513
+[Info]    P:Server              Max: 2.2242
+[Info]    P:Server              Avg Time in last 400 frames:0.03156
+[Info]    P:Server              Max: 0.0619
+[Info]    P:Server              Avg Time in last 400 frames:0.03052
+[Info]    P:Server              Max: 0.0576
+[Info]    P:Server              Avg Time in last 400 frames:0.03606
+[Info]    P:Server              Max: 2.167
+[Info]    P:Server              Avg Time in last 400 frames:0.03244
+[Info]    P:Server              Max: 0.1226
+[Info]    P:Server              Avg Time in last 400 frames:0.03051
+[Info]    P:Server              Max: 0.126
+[Info]    P:Server              Avg Time in last 400 frames:0.03183
+[Info]    P:Server              Max: 0.1423
+[Info]    P:Server              Avg Time in last 400 frames:0.03882
+[Info]    P:Server              Max: 2.3667
+[Info]    P:Server              Avg Time in last 400 frames:0.03366
+[Info]    P:Server              Max: 0.0617
+[Info]    P:Server              Avg Time in last 400 frames:0.0321
+[Info]    P:Server              Max: 0.0587
+[Info]    P:Server              Avg Time in last 400 frames:0.03218
+[Info]    P:Server              Max: 0.0581
+[Info]    P:Server              Avg Time in last 400 frames:0.03696
+[Info]    P:Server              Max: 1.5836
+[Info]    P:Server              Avg Time in last 400 frames:0.03307
+[Info]    P:Server              Max: 0.0592
+[Info]    P:Server              Avg Time in last 400 frames:0.03154
+[Info]    P:Server              Max: 0.0543
+[Info]    P:Server              Avg Time in last 400 frames:0.03199
+[Info]    P:Server              Max: 0.0617
+[Info]    P:Server              Avg Time in last 400 frames:0.03671
+[Info]    P:Server              Max: 1.6742
+[Info]    P:Server              Avg Time in last 400 frames:0.03212
+[Info]    P:Server              Max: 0.0579
+[Info]    P:Server              Avg Time in last 400 frames:0.02839
+[Info]    P:Server              Max: 0.096
+[Info]    P:Server              Avg Time in last 400 frames:0.03444
+[Info]    P:Server              Max: 1.3804
+[Info]    P:Server              Avg Time in last 400 frames:0.03082
+[Info]    P:Server              Max: 0.0583

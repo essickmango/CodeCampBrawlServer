@@ -1,0 +1,71 @@
+[Trace]   DarkRiftServer        System Details:
+                                	OS: Microsoft Windows NT 6.2.9200.0
+                                	CLS Version: 4.0.30319.42000
+                                	DarkRift: 2.0.0.0 - Free
+[Trace]   PluginFactory         Created plugin 'Server'.
+[Info]    PluginManager         Loaded plugin Server version 1.0.0
+[Info]    DarkRiftServer        Server mounted, listening on port 4296.
+[Info]    P:Server              Avg Time in last 400 frames:0.00108
+[Info]    P:Server              Max: 0.035
+[Info]    ClientManager         New client [0] connected [127.0.0.1:50422|55808].
+[Info]    P:Server              Avg Time in last 400 frames:0.00151
+[Info]    P:Server              Max: 0.1087
+[Info]    P:Server              Avg Time in last 400 frames:0.16615
+[Info]    P:Server              Max: 9.0341
+[Info]    P:Server              Avg Time in last 400 frames:0.1354
+[Info]    P:Server              Max: 3.7745
+[Info]    P:Server              Avg Time in last 400 frames:0.11081
+[Info]    P:Server              Max: 0.2518
+[Info]    ClientManager         Client [0] disconnected.
+[Info]    P:Server              Avg Time in last 400 frames:0.04592
+[Info]    P:Server              Max: 0.2898
+[Info]    P:Server              Avg Time in last 400 frames:0.02117
+[Info]    P:Server              Max: 0.1884
+[Info]    P:Server              Avg Time in last 400 frames:0.02192
+[Info]    P:Server              Max: 2.8791
+[Info]    P:Server              Avg Time in last 400 frames:0.01659
+[Info]    P:Server              Max: 0.1715
+[Info]    P:Server              Avg Time in last 400 frames:0.01763
+[Info]    P:Server              Max: 0.1588
+[Info]    P:Server              Avg Time in last 400 frames:0.01656
+[Info]    P:Server              Max: 0.1389
+[Info]    P:Server              Avg Time in last 400 frames:0.01512
+[Info]    P:Server              Max: 0.2095
+[Info]    P:Server              Avg Time in last 400 frames:0.01666
+[Info]    P:Server              Max: 0.125
+[Info]    P:Server              Avg Time in last 400 frames:0.01741
+[Info]    P:Server              Max: 0.134
+[Info]    P:Server              Avg Time in last 400 frames:0.02007
+[Info]    P:Server              Max: 0.3351
+[Info]    P:Server              Avg Time in last 400 frames:0.0154
+[Info]    P:Server              Max: 0.1509
+[Info]    P:Server              Avg Time in last 400 frames:0.07843
+[Info]    P:Server              Max: 23.2378
+[Info]    P:Server              Avg Time in last 400 frames:0.01869
+[Info]    P:Server              Max: 0.4661
+[Info]    P:Server              Avg Time in last 400 frames:0.01573
+[Info]    P:Server              Max: 0.2138
+[Info]    P:Server              Avg Time in last 400 frames:0.01781
+[Info]    P:Server              Max: 0.6937
+[Info]    P:Server              Avg Time in last 400 frames:0.02027
+[Info]    P:Server              Max: 0.134
+[Info]    P:Server              Avg Time in last 400 frames:0.01651
+[Info]    P:Server              Max: 0.2336
+[Info]    P:Server              Avg Time in last 400 frames:0.0226
+[Info]    P:Server              Max: 0.5983
+[Info]    P:Server              Avg Time in last 400 frames:0.01819
+[Info]    P:Server              Max: 0.1244
+[Info]    P:Server              Avg Time in last 400 frames:0.01498
+[Info]    P:Server              Max: 0.0417
+[Info]    P:Server              Avg Time in last 400 frames:0.01562
+[Info]    P:Server              Max: 0.1069
+[Info]    P:Server              Avg Time in last 400 frames:0.01581
+[Info]    P:Server              Max: 0.2028
+[Info]    P:Server              Avg Time in last 400 frames:0.01849
+[Info]    P:Server              Max: 0.1515
+[Info]    P:Server              Avg Time in last 400 frames:0.02251
+[Info]    P:Server              Max: 0.1516
+[Info]    P:Server              Avg Time in last 400 frames:0.01878
+[Info]    P:Server              Max: 0.1509
+[Info]    P:Server              Avg Time in last 400 frames:0.01493
+[Info]    P:Server              Max: 0.0713

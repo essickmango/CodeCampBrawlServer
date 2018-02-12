@@ -1,0 +1,25 @@
+[Trace]   DarkRiftServer        System Details:
+                                	OS: Microsoft Windows NT 6.2.9200.0
+                                	CLS Version: 4.0.30319.42000
+                                	DarkRift: 2.0.0.0 - Free
+[Trace]   PluginFactory         Created plugin 'Server'.
+[Info]    PluginManager         Loaded plugin Server version 1.0.0
+[Info]    DarkRiftServer        Server mounted, listening on port 4296.
+[Info]    P:Server              Avg Time in last 400 frames:0.00063
+[Info]    P:Server              Max: 0.0107
+[Info]    ClientManager         New client [0] connected [127.0.0.1:52381|61033].
+[Info]    P:Server              Avg Time in last 400 frames:0.04018
+[Info]    P:Server              Max: 2.9873
+[Info]    ClientManager         New client [1] connected [127.0.0.1:52387|61181].
+[Info]    P:Server              Avg Time in last 400 frames:0.14735
+[Info]    P:Server              Max: 0.2765
+[Info]    P:Server              Avg Time in last 400 frames:0.19719
+[Info]    P:Server              Max: 3.3441
+[Info]    P:Server              Avg Time in last 400 frames:0.20637
+[Info]    P:Server              Max: 0.557
+[Info]    P:Server              Avg Time in last 400 frames:0.2058
+[Info]    P:Server              Max: 7.5172
+[Info]    P:Server              Avg Time in last 400 frames:0.26914
+[Info]    P:Server              Max: 11.4496
+[Info]    ClientManager         Client [1] disconnected.
+[Info]    ClientManager         Client [0] disconnected.

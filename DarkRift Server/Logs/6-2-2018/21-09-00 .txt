@@ -1,0 +1,27 @@
+[Trace]   DarkRiftServer        System Details:
+                                	OS: Microsoft Windows NT 6.2.9200.0
+                                	CLS Version: 4.0.30319.42000
+                                	DarkRift: 2.0.0.0 - Free
+[Trace]   PluginFactory         Created plugin 'Server'.
+[Info]    PluginManager         Loaded plugin Server version 1.0.0
+[Info]    DarkRiftServer        Server mounted, listening on port 4296.
+[Info]    ClientManager         New client [0] connected [31.10.154.172:16274|16283].
+[Info]    ClientManager         New client [1] connected [83.78.99.6:55998|53963].
+[Info]    ClientManager         Client [1] disconnected.
+[Info]    P:Server              Avg Time in last 400 frames:0.0006
+[Info]    P:Server              Max: 0.01
+[Info]    ClientManager         New client [2] connected [83.78.99.6:56001|58420].
+[Error]   Client                An plugin encountered an error whilst handling the MessageReceived event. The message was not distributed. (See logs for exception)
+                                 System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+                                    at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+                                    at MainPlugin.Server.JoinGame(Object sender, Message message)
+                                    at MainPlugin.Server.OnMessage(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.HandleIncomingMessage(Message message, SendMode sendMode)
+[Info]    P:Server              Avg Time in last 400 frames:0.01593
+[Info]    P:Server              Max: 2.5121
+[Info]    P:Server              Avg Time in last 400 frames:0.08884
+[Info]    P:Server              Max: 0.2209
+[Info]    ClientManager         Client [2] disconnected.
+[Info]    P:Server              Avg Time in last 400 frames:0.10387
+[Info]    P:Server              Max: 2.9361
+[Info]    ClientManager         Client [0] disconnected.

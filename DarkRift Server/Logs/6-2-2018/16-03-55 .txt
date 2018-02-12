@@ -1,0 +1,45 @@
+[Trace]   DarkRiftServer        System Details:
+                                	OS: Microsoft Windows NT 6.2.9200.0
+                                	CLS Version: 4.0.30319.42000
+                                	DarkRift: 2.0.0.0 - Free
+[Trace]   PluginFactory         Created plugin 'Server'.
+[Info]    PluginManager         Loaded plugin Server version 1.0.0
+[Info]    DarkRiftServer        Server mounted, listening on port 4296.
+[Info]    P:Server              Avg Time in last 400 frames:0.00073
+[Info]    P:Server              Max: 0.0113
+[Info]    P:Server              Avg Time in last 400 frames:0.0006
+[Info]    P:Server              Max: 0.0049
+[Info]    ClientManager         New client [0] connected [127.0.0.1:52352|58751].
+[Info]    ClientManager         New client [1] connected [127.0.0.1:52354|58752].
+[Info]    P:Server              Avg Time in last 400 frames:0.00067
+[Info]    P:Server              Max: 0.0136
+[Info]    ClientManager         Client [1] disconnected.
+[Info]    ClientManager         New client [2] connected [127.0.0.1:52357|56046].
+[Info]    P:Server              Avg Time in last 400 frames:0.07266
+[Info]    P:Server              Max: 3.7448
+[Info]    ClientManager         Client [2] disconnected.
+[Info]    ClientManager         Client [0] disconnected.
+[Info]    P:Server              Avg Time in last 400 frames:0.03245
+[Info]    P:Server              Max: 0.2992
+[Info]    P:Server              Avg Time in last 400 frames:0.02111
+[Info]    P:Server              Max: 0.1388
+[Info]    P:Server              Avg Time in last 400 frames:0.01956
+[Info]    P:Server              Max: 0.0814
+[Info]    P:Server              Avg Time in last 400 frames:0.02035
+[Info]    P:Server              Max: 0.0563
+[Info]    P:Server              Avg Time in last 400 frames:0.01868
+[Info]    P:Server              Max: 0.086
+[Info]    ClientManager         New client [3] connected [127.0.0.1:52364|54767].
+[Info]    ClientManager         New client [4] connected [127.0.0.1:52366|54768].
+[Error]   Client                An plugin encountered an error whilst handling the MessageReceived event. The message was not distributed. (See logs for exception)
+                                 System.ArgumentException: An item with the same key has already been added.
+                                    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+                                    at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+                                    at MainPlugin.Server.CreateTestGame(Object sender, Message message)
+                                    at MainPlugin.Server.OnMessage(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.HandleIncomingMessage(Message message, SendMode sendMode)
+[Info]    P:Server              Avg Time in last 400 frames:0.01969
+[Info]    P:Server              Max: 0.063
+[Info]    ClientManager         Client [4] disconnected.
+[Info]    P:Server              Avg Time in last 400 frames:0.02561
+[Info]    P:Server              Max: 2.0976
