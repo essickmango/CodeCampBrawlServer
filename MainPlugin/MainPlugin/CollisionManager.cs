@@ -8,19 +8,16 @@ namespace MainPlugin
 
         public static bool CollideBoxColliders(BoxCollider col1, BoxCollider col2)
         {
-            Vector2 min1 = new Vector2(col1.Transform.Position.x - col1.Size.x/2, col1.Transform.Position.y - col1.Size.y/2 );
-            Vector2 max1 = new Vector2(col1.Transform.Position.x + col1.Size.x/2, col1.Transform.Position.y + col1.Size.y/2);
+            Vector2 middleDis = new Vector2(Math.Abs(col1.Transform.Position.x - col2.Transform.Position.x), Math.Abs(col1.Transform.Position.y - col2.Transform.Position.y));
 
-            Vector2 min2 = new Vector2(col2.Transform.Position.x - col2.Size.x / 2, col2.Transform.Position.y - col2.Size.y / 2);
-            Vector2 max2 = new Vector2(col2.Transform.Position.x + col2.Size.x / 2, col2.Transform.Position.y + col2.Size.y / 2);
-            if ((min1.x >= min2.x && min1.x < max2.x) ||(max1.x <= max2.x && max1.x > min2.x))
+            if (middleDis.x < ((col1.Size.x / 2) + (col2.Size.x / 2)))
             {
-                if ((min1.y >= min2.y && min1.y < max2.y) || (max1.y <= max2.y && max1.y > min2.y))
+                if (middleDis.y < ((col2.Size.y / 2) + (col2.Size.y / 2)))
                 {
                     return true;
                 }
             }
-
+            
             return false;
         }
 
