@@ -10,9 +10,9 @@ namespace MainPlugin
         {
             Vector2 middleDis = new Vector2(Math.Abs(col1.Transform.Position.x - col2.Transform.Position.x), Math.Abs(col1.Transform.Position.y - col2.Transform.Position.y));
 
-            if (middleDis.x < ((col1.Size.x / 2) + (col2.Size.x / 2)))
+            if (middleDis.x <= ((col1.Size.x / 2) + (col2.Size.x / 2)))
             {
-                if (middleDis.y < ((col2.Size.y / 2) + (col2.Size.y / 2)))
+                if (middleDis.y <= ((col2.Size.y / 2) + (col2.Size.y / 2)))
                 {
                     return true;
                 }
