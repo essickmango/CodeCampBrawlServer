@@ -17,3 +17,13 @@ C:\Users\luke\Dropbox\Luke\Unity\CCBServer\MainPlugin\MainPlugin\bin\Debug\DarkR
 C:\Users\luke\Dropbox\Luke\Unity\CCBServer\MainPlugin\MainPlugin\bin\Debug\DarkRift.Server.dll
 C:\Users\luke\Dropbox\Luke\Unity\CCBServer\MainPlugin\MainPlugin\bin\Debug\DarkRift.xml
 C:\Users\luke\Dropbox\Luke\Unity\CCBServer\MainPlugin\MainPlugin\bin\Debug\DarkRift.Server.xml
+C:\Users\timon\Documents\CCBserver\CodeCampBrawlServer\MainPlugin\MainPlugin\bin\Debug\MainPlugin.dll
+C:\Users\timon\Documents\CCBserver\CodeCampBrawlServer\MainPlugin\MainPlugin\bin\Debug\MainPlugin.pdb
+C:\Users\timon\Documents\CCBserver\CodeCampBrawlServer\MainPlugin\MainPlugin\bin\Debug\DarkRift.dll
+C:\Users\timon\Documents\CCBserver\CodeCampBrawlServer\MainPlugin\MainPlugin\bin\Debug\DarkRift.Server.dll
+C:\Users\timon\Documents\CCBserver\CodeCampBrawlServer\MainPlugin\MainPlugin\bin\Debug\DarkRift.xml
+C:\Users\timon\Documents\CCBserver\CodeCampBrawlServer\MainPlugin\MainPlugin\bin\Debug\DarkRift.Server.xml
+C:\Users\timon\Documents\CCBserver\CodeCampBrawlServer\MainPlugin\MainPlugin\obj\Debug\MainPlugin.csprojResolveAssemblyReference.cache
+C:\Users\timon\Documents\CCBserver\CodeCampBrawlServer\MainPlugin\MainPlugin\obj\Debug\MainPlugin.csproj.CoreCompileInputs.cache
+C:\Users\timon\Documents\CCBserver\CodeCampBrawlServer\MainPlugin\MainPlugin\obj\Debug\MainPlugin.dll
+C:\Users\timon\Documents\CCBserver\CodeCampBrawlServer\MainPlugin\MainPlugin\obj\Debug\MainPlugin.pdb

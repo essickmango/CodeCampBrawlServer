@@ -10,9 +10,9 @@ namespace MainPlugin
         {
             Vector2 middleDis = new Vector2(Math.Abs(col1.Transform.Position.x - col2.Transform.Position.x), Math.Abs(col1.Transform.Position.y - col2.Transform.Position.y));
 
-            if (middleDis.x <= ((col1.Size.x / 2) + (col2.Size.x / 2)))
+            if (middleDis.x <= (col1.Size.x + col2.Size.x) / 2)
             {
-                if (middleDis.y <= ((col2.Size.y / 2) + (col2.Size.y / 2)))
+                if (middleDis.y <= (col1.Size.y + col2.Size.y) / 2)
                 {
                     return true;
                 }
@@ -26,7 +26,7 @@ namespace MainPlugin
             float distX = Math.Abs(circle.Transform.Position.x - box.Transform.Position.x);
             float distY = Math.Abs(circle.Transform.Position.y - box.Transform.Position.y);
 
-            //If the distance is greater than halfCircle +halfRect, then they are too far apart to be colliding
+            //If the distance is greater than halfCircle + halfRect, then they are too far apart to be colliding
             if (distX > (box.Size.x / 2 + circle.Radius) || distY > (box.Size.y / 2 + circle.Radius))
             {
                 return false;
