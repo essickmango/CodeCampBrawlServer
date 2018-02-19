@@ -65,23 +65,33 @@ namespace MainPlugin
 
             //if hit player disapear and do dmg
             Character hit = Game.HitEnemyCharacter(Collider, Owner);
-            DarkRiftWriter writer = DarkRiftWriter.Create();
+            bool hitMapObject = Game.CollideWithMap(Collider);
             if (hit!= null)
             {
                 //do dmg
                 hit.TakeDmg(40);
-                Game.GameTick -= Tick;
-                writer.Write(Id);
-                Game.SendMessageToAll(Message.Create((ushort)Tags.KillObject, writer));
+                Dispose();
             }
 
-            writer = DarkRiftWriter.Create();
+            if (hitMapObject)
+            {
+                Dispose();
+            }
+
+            DarkRiftWriter writer = DarkRiftWriter.Create();
             writer.Write(Id);
             writer.Write(Transform.Position.x);
             writer.Write(Transform.Position.y);
             Game.SendMessageToAll(Message.Create((ushort) Tags.MoveObject, writer));
 
 
+        }
+        public override void Dispose()
+        {
+            base.Dispose();
+            DarkRiftWriter writer = DarkRiftWriter.Create();
+            writer.Write(Id);
+            Game.SendMessageToAll(Message.Create((ushort)Tags.KillObject, writer));
         }
 
     }
