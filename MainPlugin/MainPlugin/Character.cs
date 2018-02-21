@@ -101,11 +101,11 @@ namespace MainPlugin
                 float ResetDistance = 0;
                 if (CollidedMapObjectVert.Collider.GetType() == typeof(BoxCollider))
                 {
-                    ResetDistance = ((BoxCollider)CollidedMapObjectVert.Collider).Size.y / 2 + ((BoxCollider)Collider).Size.y + (float)0.001;
+                    ResetDistance = ((BoxCollider)CollidedMapObjectVert.Collider).Size.y / 2;
                 }
                 else if (CollidedMapObjectVert.Collider.GetType() == typeof(BoxCollider))
                 {
-                    ResetDistance = ((CircleCollider)CollidedMapObjectVert.Collider).Radius + ((BoxCollider)Collider).Size.y + (float)0.001;
+                    ResetDistance = ((CircleCollider)CollidedMapObjectVert.Collider).Radius;
                 }
                 if (Velocity.y <= 0)
                 {
@@ -141,11 +141,11 @@ namespace MainPlugin
                 float ResetDistance = 0;
                 if (CollidedMapObjectHor.Collider.GetType() == typeof(BoxCollider))
                 {
-                    ResetDistance = ((BoxCollider)CollidedMapObjectHor.Collider).Size.x / 2 + ((BoxCollider)Collider).Size.x + (float)0.001;
+                    ResetDistance = ((BoxCollider)CollidedMapObjectHor.Collider).Size.x / 2 + (float)0.001;
                 }
                 else if (CollidedMapObjectHor.Collider.GetType() == typeof(CircleCollider))
                 {
-                    ResetDistance = ((CircleCollider)CollidedMapObjectHor.Collider).Radius + ((BoxCollider)Collider).Size.x + (float)0.001;
+                    ResetDistance = ((CircleCollider)CollidedMapObjectHor.Collider).Radius + + (float)0.001;
                 }
                 if (walkVelocity < 0)
                 {

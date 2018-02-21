@@ -1,0 +1,35 @@
+[Trace]   DarkRiftServer        System Details:
+                                	OS: Microsoft Windows NT 6.2.9200.0
+                                	CLS Version: 4.0.30319.42000
+                                	DarkRift: 2.0.0.0 - Free
+[Trace]   PluginFactory         Created plugin 'Server'.
+[Info]    PluginManager         Loaded plugin Server version 1.0.0
+[Info]    DarkRiftServer        Server mounted, listening on port 4296.
+[Info]    P:Server              Avg Time in last 400 frames:0,00156
+[Info]    P:Server              Max: 0,0321
+[Info]    P:Server              Avg Time in last 400 frames:0,00151
+[Info]    P:Server              Max: 0,0342
+[Info]    P:Server              Avg Time in last 400 frames:0,00347
+[Info]    P:Server              Max: 0,396
+[Info]    P:Server              Avg Time in last 400 frames:0,0018
+[Info]    P:Server              Max: 0,0342
+[Info]    P:Server              Avg Time in last 400 frames:0,0037
+[Info]    P:Server              Max: 0,7877
+[Info]    P:Server              Avg Time in last 400 frames:0,0021
+[Info]    P:Server              Max: 0,0693
+[Info]    P:Server              Avg Time in last 400 frames:0,00131
+[Info]    P:Server              Max: 0,0218
+[Info]    P:Server              Avg Time in last 400 frames:0,00105
+[Info]    P:Server              Max: 0,0068
+[Info]    P:Server              Avg Time in last 400 frames:0,00092
+[Info]    P:Server              Max: 0,0064
+[Info]    P:Server              Avg Time in last 400 frames:0,00088
+[Info]    P:Server              Max: 0,0035
+[Info]    P:Server              Avg Time in last 400 frames:0,00086
+[Info]    P:Server              Max: 0,0021
+[Info]    P:Server              Avg Time in last 400 frames:0,00093
+[Info]    P:Server              Max: 0,0039
+[Info]    P:Server              Avg Time in last 400 frames:0,00112
+[Info]    P:Server              Max: 0,0556
+[Info]    P:Server              Avg Time in last 400 frames:0,00153
+[Info]    ClientManager         New client [0] connected [10.0.36.129:3996|53179].
