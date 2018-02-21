@@ -1,3 +1,3 @@
 @echo off
 cd MainPlugin/MainPlugin/bin/Debug
-cp MainPlugin.dll ../../../../DarkRift Server
+copy /Y MainPlugin.dll "../../../../DarkRift Server/Plugins"
