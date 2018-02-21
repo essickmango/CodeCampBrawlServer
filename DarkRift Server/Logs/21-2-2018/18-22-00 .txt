@@ -1,0 +1,43 @@
+[Trace]   DarkRiftServer        System Details:
+                                	OS: Microsoft Windows NT 6.2.9200.0
+                                	CLS Version: 4.0.30319.42000
+                                	DarkRift: 2.0.0.0 - Free
+[Trace]   PluginFactory         Created plugin 'Server'.
+[Info]    PluginManager         Loaded plugin Server version 1.0.0
+[Info]    DarkRiftServer        Server mounted, listening on port 4296.
+[Info]    ClientManager         New client [0] connected [10.0.36.129:4115|51210].
+[Info]    P:Server              Avg Time in last 400 frames:0,00212
+[Info]    P:Server              Max: 0,1651
+[Info]    P:Server              Avg Time in last 400 frames:0,46764
+[Info]    P:Server              Max: 23,0429
+[Info]    P:Server              Avg Time in last 400 frames:0,65787
+[Info]    P:Server              Max: 22,7662
+[Info]    ClientManager         Client [0] disconnected.
+[Info]    P:Server              Avg Time in last 400 frames:0,33273
+[Info]    P:Server              Max: 7,4164
+[Info]    P:Server              Avg Time in last 400 frames:0,04405
+[Info]    P:Server              Max: 2,9525
+[Info]    P:Server              Avg Time in last 400 frames:0,04362
+[Info]    P:Server              Max: 0,8472
+[Info]    P:Server              Avg Time in last 400 frames:0,04379
+[Info]    P:Server              Max: 0,3097
+[Info]    P:Server              Avg Time in last 400 frames:0,0376
+[Info]    P:Server              Max: 0,3238
+[Info]    P:Server              Avg Time in last 400 frames:0,04119
+[Info]    P:Server              Max: 0,3224
+[Info]    P:Server              Avg Time in last 400 frames:0,04033
+[Info]    P:Server              Max: 0,2968
+[Info]    P:Server              Avg Time in last 400 frames:0,04617
+[Info]    P:Server              Max: 0,6381
+[Info]    P:Server              Avg Time in last 400 frames:0,04176
+[Info]    P:Server              Max: 0,3511
+[Info]    P:Server              Avg Time in last 400 frames:0,05554
+[Info]    P:Server              Max: 1,9352
+[Info]    P:Server              Avg Time in last 400 frames:0,04025
+[Info]    P:Server              Max: 0,2074
+[Info]    P:Server              Avg Time in last 400 frames:0,06278
+[Info]    P:Server              Max: 1,6114
+[Info]    P:Server              Avg Time in last 400 frames:0,04929
+[Info]    P:Server              Max: 0,3113
+[Info]    P:Server              Avg Time in last 400 frames:0,05369
+[Info]    P:Server              Max: 0,819

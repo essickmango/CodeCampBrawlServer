@@ -24,3 +24,5 @@
 [Info]    P:Server              Max: 7,1115
 [Info]    P:Server              Avg Time in last 400 frames:0,353
 [Info]    P:Server              Max: 6,6042
+[Info]    P:Server              Avg Time in last 400 frames:0,4104
+[Info]    P:Server              Max: 11,7921
