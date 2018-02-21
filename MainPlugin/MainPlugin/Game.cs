@@ -131,6 +131,19 @@ namespace MainPlugin
 
         }
 
+
+        public MapObject CollideWithMapReturnObject(Collider col) //returns the colliding object
+        {
+            foreach (MapObject m in MapObjects)
+            {
+                if (col.IsColliding(m.Collider))
+                {
+                    return m;
+                }
+            }
+            return null;
+        }
+
         public bool IsEnlighted(Collider col)
         {
             foreach (Light l in Lights)
