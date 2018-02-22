@@ -1,7 +1,0 @@
-[Trace]   DarkRiftServer        System Details:
-                                	OS: Microsoft Windows NT 6.2.9200.0
-                                	CLS Version: 4.0.30319.42000
-                                	DarkRift: 2.0.0.0 - Free
-[Trace]   PluginFactory         Created plugin 'Server'.
-[Info]    PluginManager         Loaded plugin Server version 1.0.0
-[Info]    DarkRiftServer        Server mounted, listening on port 4296.
