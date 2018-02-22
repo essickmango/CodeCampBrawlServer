@@ -55,5 +55,53 @@ namespace MainPlugin
         }
 
 
+        public static Vector2 MoveObjToWall(Vector2 Velocity, Collider Coll, MapObject Wall)
+        {
+            Vector2 WallSize;
+            Vector2 ObjSize;
+            if (Wall.Collider.GetType() == typeof(BoxCollider))
+            {
+                WallSize = new Vector2(((BoxCollider)Wall.Collider).Size.x, ((BoxCollider)Wall.Collider).Size.y);
+            }
+            else
+            {
+                float WallRadius = ((CircleCollider)Wall.Collider).Radius;
+                WallSize = new Vector2(WallRadius, WallRadius);
+            }
+
+            if (Coll.GetType() == typeof(BoxCollider))
+            {
+                ObjSize = new Vector2(((BoxCollider)Coll).Size.x, ((BoxCollider)Coll).Size.y);
+            }
+            else
+            {
+                float ObjRadius = ((CircleCollider)Coll).Radius;
+                ObjSize = new Vector2(ObjRadius, ObjRadius);
+            }
+            float yDistance = ObjSize.y + WallSize.y + 0.001f;
+            float xDistance = ObjSize.x + WallSize.x + 0.001f;
+
+            Vector2 VelocityTry = new Vector2(Velocity.x, Velocity.y);
+            VelocityTry *= (Math.Abs(Wall.Collider.Transform.Position.x - Coll.Transform.Position.x) - ObjSize.x - WallSize.x - 0.001f) / Velocity.x;
+            Vector2 Point = VelocityTry + Coll.Transform.Position;
+
+            if (Point.y >= Wall.Transform.Position.y - yDistance && Point.y <= Wall.Transform.Position.y + yDistance) 
+            {
+                return VelocityTry;
+            }
+            else
+            {
+                VelocityTry = new Vector2(Velocity.x, Velocity.y);
+                VelocityTry *= (Math.Abs(Wall.Collider.Transform.Position.y - Coll.Transform.Position.y) - ObjSize.y - WallSize.y - 0.001f) / Velocity.y;
+                Point = VelocityTry + Coll.Transform.Position;
+                if (Point.x >= Wall.Transform.Position.x - xDistance && Point.x <= Wall.Transform.Position.y + xDistance)
+                {
+                    return VelocityTry;
+                }
+            }
+            
+            return Velocity;
+        }
+
     }
 }
