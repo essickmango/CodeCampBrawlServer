@@ -66,7 +66,7 @@ namespace MainPlugin
             else
             {
                 float WallRadius = ((CircleCollider)Wall.Collider).Radius;
-                WallSize = new Vector2(WallRadius, WallRadius);
+                WallSize = new Vector2(WallRadius, WallRadius); //yes, I'm creating a square
             }
 
             if (Coll.GetType() == typeof(BoxCollider))
@@ -78,10 +78,11 @@ namespace MainPlugin
                 float ObjRadius = ((CircleCollider)Coll).Radius;
                 ObjSize = new Vector2(ObjRadius, ObjRadius);
             }
-            float yDistance = ObjSize.y + WallSize.y + 0.001f;
+            float yDistance = ObjSize.y + WallSize.y + 0.001f; //minimum distance between Objects
             float xDistance = ObjSize.x + WallSize.x + 0.001f;
 
             Vector2 VelocityTry = new Vector2(Velocity.x, Velocity.y);
+            //Try to multiply vector until x is next to wall, then check if y is in Obj
             VelocityTry *= (Math.Abs(Wall.Collider.Transform.Position.x - Coll.Transform.Position.x) - ObjSize.x - WallSize.x - 0.001f) / Velocity.x;
             Vector2 Point = VelocityTry + Coll.Transform.Position;
 
@@ -91,6 +92,7 @@ namespace MainPlugin
             }
             else
             {
+                //the same with y, checking x, should give result if x didnt work
                 VelocityTry = new Vector2(Velocity.x, Velocity.y);
                 VelocityTry *= (Math.Abs(Wall.Collider.Transform.Position.y - Coll.Transform.Position.y) - ObjSize.y - WallSize.y - 0.001f) / Velocity.y;
                 Point = VelocityTry + Coll.Transform.Position;
@@ -99,7 +101,7 @@ namespace MainPlugin
                     return VelocityTry;
                 }
             }
-            
+            //if nothing works
             return Velocity;
         }
 

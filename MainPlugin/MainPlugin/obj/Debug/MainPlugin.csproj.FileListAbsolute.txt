@@ -26,3 +26,4 @@ C:\Users\timon\Documents\CCBserver\CodeCampBrawlServer\MainPlugin\MainPlugin\bin
 C:\Users\timon\Documents\CCBserver\CodeCampBrawlServer\MainPlugin\MainPlugin\obj\Debug\MainPlugin.csproj.CoreCompileInputs.cache
 C:\Users\timon\Documents\CCBserver\CodeCampBrawlServer\MainPlugin\MainPlugin\obj\Debug\MainPlugin.dll
 C:\Users\timon\Documents\CCBserver\CodeCampBrawlServer\MainPlugin\MainPlugin\obj\Debug\MainPlugin.pdb
+C:\Users\timon\Documents\CCBserver\CodeCampBrawlServer\MainPlugin\MainPlugin\obj\Debug\MainPlugin.csprojResolveAssemblyReference.cache

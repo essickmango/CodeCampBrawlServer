@@ -16,10 +16,7 @@ namespace MainPlugin
         public bool WalkL;
         public bool WalkR;
         public bool Jumped;
-
-        public ushort CharacterId;
-        private static ushort nextcharacterId;
-
+        
         private const float gravity = 4f;
         private const float movementSpeed = 3.5f;
         private const float jumpStrenght = 5f;
@@ -39,13 +36,12 @@ namespace MainPlugin
             c.Transform = new STransform(position,0);
             c.Velocity = new Vector2(0,0);
             c.Game = game;
-            c.CharacterId = nextcharacterId++;
             c.Collider = new BoxCollider(c.Transform, new Vector2(1f,1f));
 
             //send message to all playing players
             DarkRiftWriter writer = DarkRiftWriter.Create();
             writer.Write(c.Owner.Name);
-            writer.Write(c.CharacterId);
+            writer.Write(c.Owner.PlayerId);
             game.SendMessageToAll(Message.Create((ushort)Tags.SpawnNewCharacter, writer));
 
             c.Hp = 100;
@@ -65,7 +61,7 @@ namespace MainPlugin
                 Hp = 100;
                 //respawn
                 Transform.Position = Game.GetRandomSpawnPoint();
-                Game.UpdateMessage.AddCharacterPosUpdate(CharacterId, Transform.Position);
+                Game.UpdateMessage.AddCharacterPosUpdate(Owner.PlayerId, Transform.Position);
             }
         }
 
@@ -166,7 +162,7 @@ namespace MainPlugin
             {
                 if (Game.IsEnlighted(Collider))
                 {
-                    Game.UpdateMessage.AddCharacterPosUpdate(CharacterId, Transform.Position);
+                    Game.UpdateMessage.AddCharacterPosUpdate(Owner.PlayerId, Transform.Position);
                     WasEnlighted = true;
                 }
                 else
@@ -175,7 +171,7 @@ namespace MainPlugin
                     if (WasEnlighted)
                     {
                         WasEnlighted = false;
-                        writer.Write(CharacterId);
+                        writer.Write(Owner.PlayerId);
                         Game.SendMessageToAll(Message.Create((ushort)Tags.MakeInvisisble,writer)); ;
                     }
                     writer = DarkRiftWriter.Create();   

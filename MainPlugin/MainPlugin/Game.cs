@@ -84,7 +84,7 @@ namespace MainPlugin
             foreach (KeyValuePair<Player, Character> kvp in Players)
             {
                 writer.Write(kvp.Key.Name);
-                writer.Write(kvp.Value.CharacterId);
+                writer.Write(kvp.Value.Owner.PlayerId);
             }
 
 
