@@ -28,8 +28,15 @@ namespace MainPlugin
 
             if (other.GetType() == typeof(CircleCollider))
             {
-
+                CircleCollider circle = (CircleCollider) other;
+                Vector2 middleDis = new Vector2(Transform.Position.x - circle.Transform.Position.x,
+                    Transform.Position.y - circle.Transform.Position.y);
+                //siehe OneNote CCB > CCB > Reflection für grafische Darstellung der Herleitung der Gleichung
+                Vector2 reflection = Vector2.Dot(middleDis, velocity) * 2 * middleDis - velocity;
+                return reflection;
             }
+            Server.Instance.Log(velocity.ToString());
+            Server.Instance.Log(other.ToString());
             Server.Instance.Log("This is a Bug in GetReflection.. ur welcome :3");
             return Vector2.down;
         }
