@@ -20,27 +20,13 @@ namespace MainPlugin
         public Light Light;
 
 
-        public void OnHit()
+        public void OnHit(Collider other)
         {
             Game.GameTick -= Tick;
 
             Light?.Dispose();
 
-            if (!ignited)
-            {
-                DarkRiftWriter writer = DarkRiftWriter.Create();
-                writer.Write(Id);
-                Owner.Owner.Client.SendMessage(Message.Create((ushort) Tags.KillObject, writer), SendMode.Reliable);
-            }
-            else
-            {
-                DarkRiftWriter writer = DarkRiftWriter.Create();
-                writer.Write(Id);
-                Game.SendMessageToAll(Message.Create((ushort)Tags.KillObject, writer));
-            }
-
-
-            Light = Arealight.CreateA(new CircleCollider(Transform, 3f), Game,2);
+            Velocity = Collider.GetReflection(Velocity, other);
 
         }
 
@@ -66,7 +52,7 @@ namespace MainPlugin
 
         }
 
-        public static BeaconArrow FireArrow(Vector2 position, Vector2 direction, Game game, Character owner)
+        public static BeaconArrow ShootArrow(Vector2 position, Vector2 direction, Game game, Character owner)
         {
             BeaconArrow arrow = new BeaconArrow();
             arrow.Owner = owner;
@@ -96,6 +82,15 @@ namespace MainPlugin
 
         public override void Tick()
         {
+            if (FramesAlive == 120)
+            {
+                Dispose();
+                DarkRiftWriter writer = DarkRiftWriter.Create();
+                writer.Write(Id);
+                Game.SendMessageToAll(Message.Create((ushort)Tags.KillObject, writer));
+                Light = Arealight.CreateA(new CircleCollider(Transform, 3f), Game, 2);
+            }
+
             Vector2 oldPos = Transform.Position;
 
             Velocity.y -= Gravity * Clock.DeltaTime;
@@ -106,18 +101,20 @@ namespace MainPlugin
             }
 
             Transform.Translate(new Vector2(0, Velocity.y * Clock.DeltaTime));
-            if (Game.CollideWithMap(Collider))
+            Collider other = Game.CollideWithMapReturnObject(Collider).Collider;
+            if (other != null)
             {
                 Transform.Translate(new Vector2(0, -Velocity.y * Clock.DeltaTime));
-                OnHit();
+                OnHit(other);
                     
             }
 
             Transform.Translate(new Vector2(Velocity.x * Clock.DeltaTime, 0));
-            if (Game.CollideWithMap(Collider))
+            other = Game.CollideWithMapReturnObject(Collider).Collider;
+            if (other != null)
             {
                 Transform.Translate(new Vector2(-Velocity.x * Clock.DeltaTime, 0));
-                OnHit();
+                OnHit(other);
             }
 
             if (!ignited)

@@ -207,7 +207,7 @@ namespace MainPlugin
                 }
                 p.Character.LastCastBeacon = p.Game.Frame;
                 Vector2 dir = new Vector2(reader.ReadSingle(),reader.ReadSingle());
-                BeaconArrow a = BeaconArrow.FireArrow(p.Character.Transform.Position, dir, p.Game, p.Character);
+                BeaconArrow a = BeaconArrow.ShootArrow(p.Character.Transform.Position, dir, p.Game, p.Character);
             }
         }
 

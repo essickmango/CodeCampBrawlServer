@@ -35,9 +35,9 @@ namespace MainPlugin
                 Vector2 reflection = Vector2.Dot(middleDis, velocity) * 2 * middleDis - velocity;
                 return reflection;
             }
-            Server.Instance.Log(velocity.ToString());
-            Server.Instance.Log(other.ToString());
             Server.Instance.Log("This is a Bug in GetReflection.. ur welcome :3");
+            Server.Instance.Log("velocity:" + velocity);
+            Server.Instance.Log("object of collision" + other);
             return Vector2.down;
         }
     }
