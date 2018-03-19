@@ -22,6 +22,7 @@ namespace MainPlugin
         private const float jumpStrenght = 5f;
 
         public int Hp;
+        public int Kills;
 
         public int LastCastArrow;
         public int LastCastBeacon;
@@ -52,16 +53,21 @@ namespace MainPlugin
         }
 
 
-        public void TakeDmg(int dmg)
+        public void TakeDmg(int dmg, Character dealer)
         {
             Hp -= dmg;
 
             if (Hp <= 0)
             {
+                dealer.Kills++;
                 Hp = 100;
                 //respawn
                 Transform.Position = Game.GetRandomSpawnPoint();
                 Game.UpdateMessage.AddCharacterPosUpdate(Owner.PlayerId, Transform.Position);
+            }
+            else
+            {
+                Blood.FireBlood(Transform.Position, Game, this);
             }
         }
 

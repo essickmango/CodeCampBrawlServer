@@ -69,7 +69,7 @@ namespace MainPlugin
             if (hit!= null)
             {
                 //do dmg
-                hit.TakeDmg(40);
+                hit.TakeDmg(40, Owner);
                 Dispose();
             }
 

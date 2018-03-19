@@ -121,7 +121,12 @@ namespace MainPlugin
                 MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(-13,-9),0 ),new Vector2(3,1.75f) ),0 ),
                 MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(18,-10.5f),0 ),new Vector2(3.5f,2.5f) ),0 ),
                 MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(14,-8),0 ),new Vector2(1,1) ),0 ),
-                MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(11.5f,-6),0 ),new Vector2(1,1) ),0 ),
+                MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(11.75f,-6),0 ),new Vector2(1,1) ),0 ),
+                MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(8, -4), 0), new Vector2(1, 2)), 0),
+                MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(4, -3), 0), new Vector2(1, 2)), 0),
+                MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(4, -9), 0), new Vector2(1, 0.5f)), 0),
+                MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(-19.5f, -11), 0), new Vector2(1, 2)), 0),
+                MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(18, -5), 0), new Vector2(4, 0.5f)), 0),
             }, new List<Vector2>()
             {
                 new Vector2(0,4),

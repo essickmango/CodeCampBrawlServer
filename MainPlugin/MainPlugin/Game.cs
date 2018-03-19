@@ -67,8 +67,8 @@ namespace MainPlugin
             writer.Write((ushort)MapObjects.Count);
             foreach (MapObject go in MapObjects)
             {
-                writer.Write(go.Id);
-                if (go.Id == (ushort)MapObject.Ids.Wall)
+                writer.Write(go.Type);
+                if (go.Type == (ushort)MapObject.Ids.Wall)
                 {
                     writer.Write(go.Transform.Position.x);
                     writer.Write(go.Transform.Position.y);
