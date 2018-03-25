@@ -87,8 +87,22 @@ namespace MainPlugin
                     case (ushort)Tags.StopR:
                         StopWalk(sender, message, true);
                         break;
+                    case (ushort)Tags.SendGameList:
+                        SendGameList(sender);
+                        break;
                 }
             }
+        }
+
+        void SendGameList(object sender)
+        {
+            DarkRiftWriter writer = DarkRiftWriter.Create();
+            foreach (Game game in Games.Values)
+            {
+                writer.Write(game.Name);
+            }
+            IClient client = (IClient)sender;
+            client.SendMessage(Message.Create((ushort)Tags.SendGameList, writer), SendMode.Reliable);
         }
 
 
@@ -109,7 +123,7 @@ namespace MainPlugin
             GameCreationData tesTdata = GameCreationData.CreateSimple(new List<MapObject>()
             {
                 MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(0,-4.5f),0 ),new Vector2(20,1) ),0 ),
-                MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(0,-2f),0 ),new Vector2(3,0.5f) ),0 ),
+                MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(-1.5f,-2f),0 ),new Vector2(3,0.5f) ),0 ),
                 MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(3,-2f),0 ),new Vector2(1,5f) ),0 ),
                 MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(20,1),0 ),new Vector2(1,25) ),0 ),
                 MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(-20,1),0 ),new Vector2(1,25) ),0 ),

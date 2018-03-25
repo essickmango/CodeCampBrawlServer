@@ -17,9 +17,9 @@ namespace MainPlugin
         public bool WalkR;
         public bool Jumped;
         
-        private const float gravity = 4f;
+        private const float gravity = 10f;
         private const float movementSpeed = 3.5f;
-        private const float jumpStrenght = 5f;
+        private const float jumpStrenght = 8f;
 
         public int Hp;
         public int Kills;

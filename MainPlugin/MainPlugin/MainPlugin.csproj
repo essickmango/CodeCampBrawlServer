@@ -58,6 +58,7 @@
     <Compile Include="GameUpdateMessage.cs" />
     <Compile Include="Light.cs" />
     <Compile Include="MapObject.cs" />
+    <Compile Include="ObjectPrefabsTags.cs" />
     <Compile Include="Tags.cs" />
     <Compile Include="Clock.cs" />
     <Compile Include="Collider.cs" />
