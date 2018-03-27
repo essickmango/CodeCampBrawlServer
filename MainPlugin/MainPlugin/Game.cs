@@ -11,7 +11,7 @@ namespace MainPlugin
         public ushort GameId;
         private static ushort nextGameId;
         public string Name;
-        public Dictionary<Player, Character> Players;
+        public List<Player> Players;
         public List<MapObject> MapObjects;
         public List<Vector2> SpawnPoints;
 
@@ -31,7 +31,7 @@ namespace MainPlugin
             Game game = new Game();
             game.Lights = new List<Light>();
             game.GameId = nextGameId++;
-            game.Players = new Dictionary<Player, Character>();
+            game.Players = new List<Player>();
             game.Name = gameName;
             game.MapObjects = gameCreationData.MapObjects;
             game.SpawnPoints = gameCreationData.SpawnPoints;
@@ -45,7 +45,7 @@ namespace MainPlugin
         public void JoinPlayer(Player player)
         {
             Character c = Character.Create(GetRandomSpawnPoint(), this, player);
-            Players.Add(player,c);
+            Players.Add(player);
             player.Game = this;
             player.Character = c; 
             player.Client.SendMessage(GetGameStartMessage(), SendMode.Reliable);
@@ -81,10 +81,10 @@ namespace MainPlugin
             }
 
             writer.Write((byte)Players.Count);
-            foreach (KeyValuePair<Player, Character> kvp in Players)
+            foreach (Player p in Players)
             {
-                writer.Write(kvp.Key.Name);
-                writer.Write(kvp.Value.Owner.PlayerId);
+                writer.Write(p.Name);
+                writer.Write(p.Character.Owner.PlayerId);
             }
 
 
@@ -98,9 +98,9 @@ namespace MainPlugin
         public void Tick()
         {
             Frame++;
-            foreach (Character c in Players.Values )
+            foreach (Player p in Players)
             {
-                c.Tick();
+                p.Character.Tick();
             }
 
             GameTick?.Invoke();
@@ -111,7 +111,7 @@ namespace MainPlugin
 
         public void SendMessageToAll(Message message)
         {
-            foreach (Player p in Players.Keys)
+            foreach (Player p in Players)
             {
                 p.Client.SendMessage(message, SendMode.Reliable);
             }
@@ -132,13 +132,13 @@ namespace MainPlugin
         }
 
 
-        public MapObject CollideWithMapReturnObject(Collider col) //returns the colliding object
+        public Collider CollideWithMapReturnCollider(Collider col) //returns the colliding object
         {
             foreach (MapObject m in MapObjects)
             {
                 if (col.IsColliding(m.Collider))
                 {
-                    return m;
+                    return m.Collider;
                 }
             }
             return null;
@@ -158,15 +158,15 @@ namespace MainPlugin
 
         public Character HitEnemyCharacter(Collider col, Character own)
         {
-            foreach (Character c in Players.Values)
+            foreach (Player p in Players)
             {
-                if (c == own)
+                if (p.Character == own)
                 {
                    continue;
                 }
-                if (col.IsColliding(c.Collider))
+                if (col.IsColliding(p.Character.Collider))
                 {
-                    return c;
+                    return p.Character;
                 }
             }
             return null;

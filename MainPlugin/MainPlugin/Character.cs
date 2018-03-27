@@ -52,6 +52,13 @@ namespace MainPlugin
             return c;
         }
 
+        public void DisposeCharacter()
+        {
+            DarkRiftWriter writer = DarkRiftWriter.Create();
+            writer.Write(Owner.PlayerId);
+            Game.SendMessageToAll(Message.Create((ushort)Tags.PlayerDisconnect, writer));
+        }
+
 
         public void TakeDmg(int dmg, Character dealer)
         {
@@ -97,26 +104,26 @@ namespace MainPlugin
             Velocity.y -= gravity * Clock.DeltaTime;
 
             Transform.Translate(new Vector2(0, Velocity.y* Clock.DeltaTime));
-            MapObject CollidedMapObjectVert = Game.CollideWithMapReturnObject(Collider);
+            Collider CollidedMapObjectVert = Game.CollideWithMapReturnCollider(Collider);
             if (CollidedMapObjectVert != null)
             {
                 float ResetDistance = 0;
-                if (CollidedMapObjectVert.Collider.GetType() == typeof(BoxCollider))
+                if (CollidedMapObjectVert.GetType() == typeof(BoxCollider))
                 {
-                    ResetDistance = ((BoxCollider)CollidedMapObjectVert.Collider).Size.y / 2 + ((BoxCollider)Collider).Size.y / 2 + 0.001f;
+                    ResetDistance = ((BoxCollider)CollidedMapObjectVert).Size.y / 2 + ((BoxCollider)Collider).Size.y / 2 + 0.001f;
                 }
-                else if (CollidedMapObjectVert.Collider.GetType() == typeof(BoxCollider))
+                else if (CollidedMapObjectVert.GetType() == typeof(BoxCollider))
                 {
-                    ResetDistance = ((CircleCollider)CollidedMapObjectVert.Collider).Radius + ((BoxCollider)Collider).Size.y / 2 + 0.001f;
+                    ResetDistance = ((CircleCollider)CollidedMapObjectVert).Radius + ((BoxCollider)Collider).Size.y / 2 + 0.001f;
                 }
                 if (Velocity.y <= 0)
                 {
-                    Transform.Translate(new Vector2(0, CollidedMapObjectVert.Collider.Transform.Position.y - Transform.Position.y + ResetDistance));
+                    Transform.Translate(new Vector2(0, CollidedMapObjectVert.Transform.Position.y - Transform.Position.y + ResetDistance));
                     Grounded = true;
                 }
                 else
                 {
-                    Transform.Translate(new Vector2(0, CollidedMapObjectVert.Collider.Transform.Position.y - Transform.Position.y - ResetDistance));
+                    Transform.Translate(new Vector2(0, CollidedMapObjectVert.Transform.Position.y - Transform.Position.y - ResetDistance));
                 }
 
                 //Transform.Translate(new Vector2(0, -Velocity.y*Clock.DeltaTime));
@@ -138,25 +145,25 @@ namespace MainPlugin
             }
 
             Transform.Translate(new Vector2(Velocity.x*Clock.DeltaTime+walkVelocity,0));
-            MapObject CollidedMapObjectHor = Game.CollideWithMapReturnObject(Collider);
+            Collider CollidedMapObjectHor = Game.CollideWithMapReturnCollider(Collider);
             if (CollidedMapObjectHor != null)
             {
                 float ResetDistance = 0;
-                if (CollidedMapObjectHor.Collider.GetType() == typeof(BoxCollider))
+                if (CollidedMapObjectHor.GetType() == typeof(BoxCollider))
                 {
-                    ResetDistance = ((BoxCollider)CollidedMapObjectHor.Collider).Size.x / 2 + ((BoxCollider)Collider).Size.x / 2 + 0.001f;
+                    ResetDistance = ((BoxCollider)CollidedMapObjectHor).Size.x / 2 + ((BoxCollider)Collider).Size.x / 2 + 0.001f;
                 }
-                else if (CollidedMapObjectHor.Collider.GetType() == typeof(CircleCollider))
+                else if (CollidedMapObjectHor.GetType() == typeof(CircleCollider))
                 {
-                    ResetDistance = ((CircleCollider)CollidedMapObjectHor.Collider).Radius + ((BoxCollider)Collider).Size.x / 2 + 0.001f;
+                    ResetDistance = ((CircleCollider)CollidedMapObjectHor).Radius + ((BoxCollider)Collider).Size.x / 2 + 0.001f;
                 }
                 if (walkVelocity < 0)
                 {
-                    Transform.Translate(new Vector2(CollidedMapObjectHor.Collider.Transform.Position.x - Transform.Position.x + ResetDistance, 0));
+                    Transform.Translate(new Vector2(CollidedMapObjectHor.Transform.Position.x - Transform.Position.x + ResetDistance, 0));
                 }
                 else
                 {
-                    Transform.Translate(new Vector2(CollidedMapObjectHor.Collider.Transform.Position.x - Transform.Position.x - ResetDistance, 0));
+                    Transform.Translate(new Vector2(CollidedMapObjectHor.Transform.Position.x - Transform.Position.x - ResetDistance, 0));
                 }
                 //Transform.Translate(new Vector2(-Velocity.x * Clock.DeltaTime - walkVelocity, 0));
                 Velocity.x = 0;

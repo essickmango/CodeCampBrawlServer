@@ -46,6 +46,7 @@ namespace MainPlugin
         void OnClientDisconnect(object sender, ClientDisconnectedEventArgs e)
         {
             e.Client.MessageReceived -= OnMessage;
+            Players[e.Client.ID].DisposePlayer();
         }
 
 
@@ -100,6 +101,7 @@ namespace MainPlugin
             foreach (Game game in Games.Values)
             {
                 writer.Write(game.Name);
+                writer.Write((ushort)game.Players.Count);
             }
             IClient client = (IClient)sender;
             client.SendMessage(Message.Create((ushort)Tags.SendGameList, writer), SendMode.Reliable);
