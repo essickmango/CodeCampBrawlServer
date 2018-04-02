@@ -12,19 +12,18 @@ namespace MainPlugin
 
         public ushort Id;
 
-        private const float Gravity = 7f;
-        private const float ShootStrenght = 11f;
+        private const float Gravity = 4f;
+        private const float ShootStrenght = 15f;
 
         private bool ignited;
 
         public Light Light;
 
-
         public void OnHit(Collider other)
         {
-            Game.GameTick -= Tick;
+            //       Game.GameTick -= Tick;
 
-            Light?.Dispose();
+            //       Light?.Dispose();
 
             Velocity = Collider.GetReflection(Velocity, other);
 
@@ -82,7 +81,12 @@ namespace MainPlugin
 
         public override void Tick()
         {
-            if (FramesAlive == 120)
+            base.Tick();
+            if (FramesAlive == 120 && !ignited)
+            {
+                Ignite();
+            }
+            if (FramesAlive == 240)
             {
                 Dispose();
                 DarkRiftWriter writer = DarkRiftWriter.Create();
@@ -97,7 +101,7 @@ namespace MainPlugin
 
             if (Velocity.y < 0 && !ignited)
             {
-                Ignite();   
+             //   Ignite();   
             }
 
             Transform.Translate(new Vector2(0, Velocity.y * Clock.DeltaTime));

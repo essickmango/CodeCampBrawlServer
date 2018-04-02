@@ -36,3 +36,12 @@ C:\Users\DemonicLP\Documents\GitHub\CodeCampBrawlServer\MainPlugin\MainPlugin\bi
 C:\Users\DemonicLP\Documents\GitHub\CodeCampBrawlServer\MainPlugin\MainPlugin\bin\Debug\DarkRift.Server.dll
 C:\Users\DemonicLP\Documents\GitHub\CodeCampBrawlServer\MainPlugin\MainPlugin\bin\Debug\DarkRift.xml
 C:\Users\DemonicLP\Documents\GitHub\CodeCampBrawlServer\MainPlugin\MainPlugin\bin\Debug\DarkRift.Server.xml
+C:\Users\luke\Dropbox\Luke\Unity\CCBServer\CodeCampBrawlServer\MainPlugin\MainPlugin\bin\Debug\MainPlugin.dll
+C:\Users\luke\Dropbox\Luke\Unity\CCBServer\CodeCampBrawlServer\MainPlugin\MainPlugin\bin\Debug\MainPlugin.pdb
+C:\Users\luke\Dropbox\Luke\Unity\CCBServer\CodeCampBrawlServer\MainPlugin\MainPlugin\bin\Debug\DarkRift.dll
+C:\Users\luke\Dropbox\Luke\Unity\CCBServer\CodeCampBrawlServer\MainPlugin\MainPlugin\bin\Debug\DarkRift.Server.dll
+C:\Users\luke\Dropbox\Luke\Unity\CCBServer\CodeCampBrawlServer\MainPlugin\MainPlugin\bin\Debug\DarkRift.xml
+C:\Users\luke\Dropbox\Luke\Unity\CCBServer\CodeCampBrawlServer\MainPlugin\MainPlugin\bin\Debug\DarkRift.Server.xml
+C:\Users\luke\Dropbox\Luke\Unity\CCBServer\CodeCampBrawlServer\MainPlugin\MainPlugin\obj\Debug\MainPlugin.csprojResolveAssemblyReference.cache
+C:\Users\luke\Dropbox\Luke\Unity\CCBServer\CodeCampBrawlServer\MainPlugin\MainPlugin\obj\Debug\MainPlugin.dll
+C:\Users\luke\Dropbox\Luke\Unity\CCBServer\CodeCampBrawlServer\MainPlugin\MainPlugin\obj\Debug\MainPlugin.pdb
