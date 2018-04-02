@@ -32,5 +32,16 @@ namespace MainPlugin
             return player;
         }
 
+        public void DisposePlayer()
+        {
+            if (Game != null)
+            {
+                Game.Players.Remove(this);
+                Character.DisposeCharacter();
+            }
+            Server.Players.Remove(Client.ID);
+
+        }
+
     }
 }

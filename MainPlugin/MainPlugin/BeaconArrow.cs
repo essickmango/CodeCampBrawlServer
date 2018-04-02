@@ -101,7 +101,7 @@ namespace MainPlugin
             }
 
             Transform.Translate(new Vector2(0, Velocity.y * Clock.DeltaTime));
-            Collider other = Game.CollideWithMapReturnObject(Collider).Collider;
+            Collider other = Game.CollideWithMapReturnCollider(Collider);
             if (other != null)
             {
                 Transform.Translate(new Vector2(0, -Velocity.y * Clock.DeltaTime));
@@ -110,7 +110,7 @@ namespace MainPlugin
             }
 
             Transform.Translate(new Vector2(Velocity.x * Clock.DeltaTime, 0));
-            other = Game.CollideWithMapReturnObject(Collider).Collider;
+            other = Game.CollideWithMapReturnCollider(Collider);
             if (other != null)
             {
                 Transform.Translate(new Vector2(-Velocity.x * Clock.DeltaTime, 0));

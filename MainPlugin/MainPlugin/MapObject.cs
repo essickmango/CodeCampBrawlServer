@@ -5,9 +5,10 @@
         public STransform Transform;
         public Collider Collider;
         public ushort Type;
-        public enum  Ids
+        public enum  TypeIds
         {
-           Wall = 0 
+           Wall = 0,
+           Background = 5,
         }
 
         public static MapObject CreatePreset(Collider collider, ushort type)

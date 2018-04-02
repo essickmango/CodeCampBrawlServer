@@ -1,4 +1,5 @@
 ﻿namespace MainPlugin
+
 {
     public enum Tags
     {
@@ -21,6 +22,8 @@
         ShootArrow = 117,
         StopL = 118,
         StopR = 119,
+        SendGameList = 120,
+        PlayerDisconnect = 122,
     }
 
 }
