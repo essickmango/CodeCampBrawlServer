@@ -7,15 +7,15 @@ using System.Collections.Generic;
 
 public struct MapSave
 {
-    public MapSave(List<WallSave> walls, List<Vector2> spawns, string gameName)
+    public MapSave(List<WallSave> walls, List<Vector2> spawns, string mapName)
     {
         Walls = walls;
         SpawnPoints = spawns;
-        GameName = gameName;
+        MapName = mapName;
     }
     public List<WallSave> Walls;
     public List<Vector2> SpawnPoints;
-    public string GameName;
+    public string MapName;
 }
 
 [System.Serializable]

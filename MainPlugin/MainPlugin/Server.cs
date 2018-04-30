@@ -178,7 +178,7 @@ namespace MainPlugin
         {
             IClient client = (IClient)sender;
             DarkRiftReader reader = message.GetReader();
-
+            string gameName = reader.ReadString();
             MapSave Map = JsonUtility.FromJson<MapSave>(reader.ReadString());
 
             List<MapObject> walls = new List<MapObject>();
@@ -195,7 +195,6 @@ namespace MainPlugin
 
             GameCreationData builtData = GameCreationData.CreateSimple(walls, spawns); 
             //neither GameName nor Spawnpoints are implemented on client!!!
-            string gameName = Map.GameName; 
             if (!Games.ContainsKey(gameName))
             {
                 Game g = Game.CreateGame(gameName, builtData);
