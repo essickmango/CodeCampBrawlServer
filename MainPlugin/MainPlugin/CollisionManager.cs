@@ -55,17 +55,17 @@ namespace MainPlugin
         }
 
 
-        public static Vector2 MoveObjToWall(Vector2 Velocity, Collider Coll, MapObject Wall)
+        public static Vector2 MoveObjToWall(Vector2 Velocity, Collider Coll, Collider Wall)
         {
             Vector2 WallSize;
             Vector2 ObjSize;
-            if (Wall.Collider.GetType() == typeof(BoxCollider))
+            if (Wall.GetType() == typeof(BoxCollider))
             {
-                WallSize = new Vector2(((BoxCollider)Wall.Collider).Size.x, ((BoxCollider)Wall.Collider).Size.y);
+                WallSize = new Vector2(((BoxCollider)Wall).Size.x, ((BoxCollider)Wall).Size.y);
             }
             else
             {
-                float WallRadius = ((CircleCollider)Wall.Collider).Radius;
+                float WallRadius = ((CircleCollider)Wall).Radius;
                 WallSize = new Vector2(WallRadius, WallRadius); //yes, I'm creating a square
             }
 
@@ -81,9 +81,9 @@ namespace MainPlugin
             float yDistance = ObjSize.y + WallSize.y + 0.001f; //minimum distance between Objects
             float xDistance = ObjSize.x + WallSize.x + 0.001f;
 
-            Vector2 VelocityTry = new Vector2(Velocity.x, Velocity.y);
+            Vector2 VelocityTry = Velocity;
             //Try to multiply vector until x is next to wall, then check if y is in Obj
-            VelocityTry *= (Math.Abs(Wall.Collider.Transform.Position.x - Coll.Transform.Position.x) - ObjSize.x - WallSize.x - 0.001f) / Velocity.x;
+            VelocityTry *= (Math.Abs(Wall.Transform.Position.x - Coll.Transform.Position.x) - ObjSize.x - WallSize.x - 0.001f) / Velocity.x;
             Vector2 Point = VelocityTry + Coll.Transform.Position;
 
             if (Point.y >= Wall.Transform.Position.y - yDistance && Point.y <= Wall.Transform.Position.y + yDistance) 
@@ -93,8 +93,8 @@ namespace MainPlugin
             else
             {
                 //the same with y, checking x, should give result if x didnt work
-                VelocityTry = new Vector2(Velocity.x, Velocity.y);
-                VelocityTry *= (Math.Abs(Wall.Collider.Transform.Position.y - Coll.Transform.Position.y) - ObjSize.y - WallSize.y - 0.001f) / Velocity.y;
+                VelocityTry = Velocity;
+                VelocityTry *= (Math.Abs(Wall.Transform.Position.y - Coll.Transform.Position.y) - ObjSize.y - WallSize.y - 0.001f) / Velocity.y;
                 Point = VelocityTry + Coll.Transform.Position;
                 if (Point.x >= Wall.Transform.Position.x - xDistance && Point.x <= Wall.Transform.Position.y + xDistance)
                 {

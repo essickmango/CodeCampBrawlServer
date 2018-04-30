@@ -91,6 +91,9 @@ namespace MainPlugin
                     case (ushort)Tags.SendGameList:
                         SendGameList(sender);
                         break;
+                    case (ushort)Tags.BuiltMap:
+                        CreateBuiltGame(sender, message);
+                        break;
                 }
             }
         }
@@ -152,9 +155,64 @@ namespace MainPlugin
                 new Vector2(-15,9),
             });
 
-            Game g = Game.CreateGame(gameName, tesTdata);
-            Games.Add(g.Name,g);
-            g.JoinPlayer(Players[client.ID]);
+            if (!Games.ContainsKey(gameName))
+            {
+                Game g = Game.CreateGame(gameName, tesTdata);
+                Games.Add(g.Name, g);
+                g.JoinPlayer(Players[client.ID]);
+            }
+            else
+            {
+                gameName += " ";
+                while (Games.ContainsKey(gameName))
+                {
+                    gameName += "*";
+                }
+                Game g = Game.CreateGame(gameName, tesTdata);
+                Games.Add(g.Name, g);
+                g.JoinPlayer(Players[client.ID]);
+            }
+        }
+
+        void CreateBuiltGame(object sender, Message message)
+        {
+            IClient client = (IClient)sender;
+            DarkRiftReader reader = message.GetReader();
+
+            MapSave Map = JsonUtility.FromJson<MapSave>(reader.ReadString());
+
+            List<MapObject> walls = new List<MapObject>();
+            foreach (WallSave w in Map.Walls)
+            {
+                walls.Add(MapObject.CreatePreset(new BoxCollider(new STransform(new Vector2(w.PosX, w.PosY), 0), new Vector2(w.SizeX, w.SizeY)), 0));
+            };
+
+            List<Vector2> spawns = new List<Vector2>();
+            foreach (Vector2 spawn in Map.SpawnPoints)
+            {
+                spawns.Add(spawn);
+            }
+
+            GameCreationData builtData = GameCreationData.CreateSimple(walls, spawns); 
+            //neither GameName nor Spawnpoints are implemented on client!!!
+            string gameName = Map.GameName; 
+            if (!Games.ContainsKey(gameName))
+            {
+                Game g = Game.CreateGame(gameName, builtData);
+                Games.Add(g.Name, g);
+                g.JoinPlayer(Players[client.ID]);
+            } 
+            else
+            {
+                gameName += " ";
+                while (Games.ContainsKey(gameName))
+                {
+                    gameName += "*";
+                }
+                Game g = Game.CreateGame(gameName, builtData);
+                Games.Add(g.Name, g);
+                g.JoinPlayer(Players[client.ID]);
+            }
         }
 
         void JoinGame(object sender, Message message)

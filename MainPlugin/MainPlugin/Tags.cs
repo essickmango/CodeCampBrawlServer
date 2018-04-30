@@ -24,6 +24,7 @@
         StopR = 119,
         SendGameList = 120,
         PlayerDisconnect = 122,
+        BuiltMap = 123,
     }
 
 }
